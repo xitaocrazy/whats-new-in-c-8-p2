@@ -10,7 +10,7 @@ namespace NetConf.InterpolatedVerbatimStrings
             var idade = 28;
 
             Console.WriteLine($@"{nome} tem {idade} anos e é \casado\.");
-            Console.WriteLine(@$"{nome} tem {idade} anos e é \casado\");
+            Console.WriteLine(@$"{nome} tem {idade} anos e é \casado\.");
         }
     }
 }
