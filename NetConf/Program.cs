@@ -12,12 +12,12 @@ namespace NetConf
 {
     class Program
     {
-        static async Task Main(string[] args)
+        /* static async Task Main(string[] args)
         {
             await AsyncIterator.Demo();
-        }
+        } */
 
-        /* static void Main(string[] args)
+        static void Main(string[] args)
         {
             //Pattern.Demo();
 
@@ -25,13 +25,13 @@ namespace NetConf
 
             //IndiceAndRange.Demo();
 
-            //UsingStatement.UsingStatement.Demo();
+            //UsingStatement.UsingStatement.Demo();            
+
+            //NullCoalescingAssignment.NullCoalescingAssignment.Demo();
 
             //StaticLocalFunction.Demo();
 
             //ReadOnlyMember.Demo();
-
-            //NullCoalescingAssignment.NullCoalescingAssignment.Demo();
 
             //RefStruct.Demo();
 
@@ -40,6 +40,6 @@ namespace NetConf
             //InterpolatedVerbatimString.Demo();
 
             //UnmanagedConstraint.UnmanagedConstraint.Demo();
-        } */
+        }
     }
 }

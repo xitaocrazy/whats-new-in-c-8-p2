@@ -5,28 +5,14 @@ namespace NetConf.StaticLocalFunctions
 {
     public class StaticLocalFunction
     {
-        public static void Demo() {
+        public static void Demo() 
+        {
             foreach (var i in Contador(1,10))
                 Console.WriteLine(i);
         }
 
-        //Antes
-        public static IEnumerable<int> Contador(int inicio, int fim)
-        {
-            if (inicio >= fim)
-                throw new ArgumentOutOfRangeException("O início do contador deve ser maior do que o fim.");
-
-            return ContadorLocal();
-
-            IEnumerable<int> ContadorLocal() 
-            {
-                for (var i = inicio; i <= fim; i++)
-                    yield return i;
-            }
-        }
-
         //Agora (O compilador provê otimizações declarando como static)
-        /* public static IEnumerable<int> Contador(int inicio, int fim)
+        public static IEnumerable<int> Contador(int inicio, int fim)
         {
             if (inicio >= fim)
                 throw new ArgumentOutOfRangeException("O início do contador deve ser maior do que o fim.");
@@ -38,6 +24,6 @@ namespace NetConf.StaticLocalFunctions
                 for (var i = inicio; i <= fim; i++)
                     yield return i;
             }
-        } */
+        }
     }
 }

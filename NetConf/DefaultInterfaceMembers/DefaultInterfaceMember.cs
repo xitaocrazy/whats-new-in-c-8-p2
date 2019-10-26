@@ -8,6 +8,10 @@ namespace NetConf.DefaultInterfaceMembers
     {
         public static void Demo()
         {
+            Console.WriteLine("Humano");
+            IHumano humano = new Humano();
+            humano.Falar();
+            Console.WriteLine("-----------------------------------");
             Console.WriteLine("MinotauroVampiro");
             var minotauroVampiro = new MinotauroVampiro();
             minotauroVampiro.GolpearComChifre();

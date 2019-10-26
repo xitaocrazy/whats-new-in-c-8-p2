@@ -7,6 +7,16 @@ namespace NetConf.Patterns
     {
         public static void Demo()
         {
+            Console.WriteLine("Switch Statement");
+            Console.WriteLine(SwitchStatement(new Minotauro{Idade = 25}, 20));
+            Console.WriteLine(SwitchStatement(new Minotauro{Idade = 20}, 20));
+            Console.WriteLine(SwitchStatement(new Vampiro{Idade = 25}, 20));
+            Console.WriteLine(SwitchStatement(new Vampiro{Idade = 25}, 10));
+            Console.WriteLine(SwitchStatement(new Vampiro{Idade = 10}, 10));
+            Console.WriteLine(SwitchStatement(new Minotauro{Idade = 10}, 10));
+            Console.WriteLine(SwitchStatement(null, 10));
+            Console.WriteLine(SwitchStatement(new Anjo(), 10));
+            Console.WriteLine("-------------------------------------");
             Console.WriteLine("Switch Expression");
             Console.WriteLine(SwitchExpression(new Minotauro{Idade = 25}, 20));
             Console.WriteLine(SwitchExpression(new Minotauro{Idade = 20}, 20));
@@ -15,17 +25,7 @@ namespace NetConf.Patterns
             Console.WriteLine(SwitchExpression(new Vampiro{Idade = 10}, 10));
             Console.WriteLine(SwitchExpression(new Minotauro{Idade = 10}, 10));
             Console.WriteLine(SwitchExpression(null, 10));
-            Console.WriteLine(SwitchExpression(new Anjo(), 10));
-
-            Console.WriteLine("Switch Statement");
-            Console.WriteLine(SwitchExpression(new Minotauro{Idade = 25}, 20));
-            Console.WriteLine(SwitchExpression(new Minotauro{Idade = 20}, 20));
-            Console.WriteLine(SwitchExpression(new Vampiro{Idade = 25}, 20));
-            Console.WriteLine(SwitchExpression(new Vampiro{Idade = 25}, 10));
-            Console.WriteLine(SwitchExpression(new Vampiro{Idade = 10}, 10));
-            Console.WriteLine(SwitchExpression(new Minotauro{Idade = 10}, 10));
-            Console.WriteLine(SwitchExpression(null, 10));
-            Console.WriteLine(SwitchExpression(new Anjo(), 10));
+            Console.WriteLine(SwitchExpression(new Anjo(), 10));          
         }
 
         
@@ -42,8 +42,7 @@ namespace NetConf.Patterns
                 case (Vampiro(2000), _) : return "Golpe especial do Vampiro"; //Positional pattern
                 case (Humano {Idade: _}, _) : return "Golpe normal";
                 case (null, _) : return "Classe não informada";
-                case { }: return "Não é uma classe válida.";
-                default: throw new ArgumentOutOfRangeException();
+                default: return "Não é uma classe válida.";
             };
         }    
 
@@ -59,7 +58,7 @@ namespace NetConf.Patterns
                 (Vampiro(2000), _) => "Golpe especial do Vampiro", //Positional pattern
                 (Humano {Idade: _}, _) => "Golpe normal",
                 (null, _) => "Classe não informada",
-                { } => "Não é uma classe válida.",
+                _ => "Não é uma classe válida."
             };
     }
 }

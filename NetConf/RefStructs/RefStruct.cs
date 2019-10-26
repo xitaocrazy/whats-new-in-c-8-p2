@@ -5,10 +5,8 @@ namespace NetConf.RefStructs
     {
         public static void Demo() 
         {
-            using (var refStruct = new NetConf.Helpers.Structs.RefStruct())
-            {
-                Console.WriteLine(refStruct.GetValue());
-            }
+            using var refStruct = new NetConf.Helpers.Structs.RefStruct();
+            Console.WriteLine(refStruct.GetValue());
         }
     }
 }

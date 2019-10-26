@@ -7,14 +7,15 @@ namespace NetConf.Helpers.Structs
         public int x {get; set;}
         public int y {get; set;}
 
-        public double Distancia => Calcular();
+        readonly public double Distancia => Calcular();
 
-        public override string ToString() => $"({x}, {y}) está a {Distancia} da origem.";
+        readonly public override string ToString() => $"({x}, {y}) está a {Distancia} da origem.";
 
-        public double Calcular()
+        readonly public double Calcular()
         {
-            x = 20;
-            y = 20;
+            //Não é possível fazer alterações.
+            /* x = 20;
+            y = 20; */
             return Math.Sqrt(x*x+y*y);
         }
     }
