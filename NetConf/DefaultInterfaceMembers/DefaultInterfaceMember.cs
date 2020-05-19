@@ -8,36 +8,37 @@ namespace NetConf.DefaultInterfaceMembers
     {
         public static void Demo()
         {
-            Console.WriteLine("Humano");
-            IHumano humano = new Humano();
-            humano.Falar();
+            Console.WriteLine("Human:");
+            IHuman human = new Human();
+            human.Speak();
             Console.WriteLine("-----------------------------------");
-            Console.WriteLine("MinotauroVampiro");
-            var minotauroVampiro = new MinotauroVampiro();
-            minotauroVampiro.GolpearComChifre();
-            minotauroVampiro.Hipnotizar();
+            Console.WriteLine("MinotaurVampire:");
+            var minotauroVampiro = new MinotaurVampire();
+            minotauroVampiro.StrikeWithHorn();
+            minotauroVampiro.Hypnotize();
             Console.WriteLine("-----------------------------------");
-            Console.WriteLine("Parte Humana");
-            var parteHumana = (IHumano) minotauroVampiro;
-            parteHumana.Falar();
+            Console.WriteLine("Human part:");
+            var parteHumana = (IHuman) minotauroVampiro;
+            parteHumana.Speak();
             Console.WriteLine("-----------------------------------");
-            Console.WriteLine("Parte Minotauro");
-            var parteMinotauro = (IMinotauro) minotauroVampiro;
-            parteMinotauro.GolpearComMachado();
-            parteMinotauro.Falar();
+            Console.WriteLine("Minotaur part:");
+            var parteMinotauro = (IMinotaur) minotauroVampiro;
+            parteMinotauro.StrikeWithAxe();
+            parteMinotauro.Speak();
             Console.WriteLine("-----------------------------------");
-            Console.WriteLine("Parte Vampiro");
-            var parteVampiro = (IVampiro) minotauroVampiro;
-            parteVampiro.Curar();
-            parteVampiro.Falar();
+            Console.WriteLine("Vampire part:");
+            var parteVampiro = (IVampire) minotauroVampiro;
+            parteVampiro.Heal();
+            parteVampiro.Speak();
             Console.WriteLine("-----------------------------------");
-            Console.WriteLine("IMinotauroVampiro");
-            IMinotauroVampiro outroMinotauroVampiro = new MinotauroVampiro();
-            outroMinotauroVampiro.Falar();
-            outroMinotauroVampiro.GolpearComChifre();
-            outroMinotauroVampiro.GolpearComMachado();
-            outroMinotauroVampiro.Hipnotizar();
-            outroMinotauroVampiro.Curar();
+            Console.WriteLine("IMinotaurVampire");
+            IMinotaurVampire outroMinotaurVampire = new MinotaurVampire();
+            //MinotaurVampire outroMinotaurVampire = new MinotaurVampire();
+            outroMinotaurVampire.Speak();
+            outroMinotaurVampire.StrikeWithHorn();
+            outroMinotaurVampire.StrikeWithAxe();
+            outroMinotaurVampire.Hypnotize();
+            outroMinotaurVampire.Heal();
         }
     }
 }

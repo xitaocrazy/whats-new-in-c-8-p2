@@ -5,7 +5,7 @@ namespace NetConf.Helpers.Classes
 {
     public class Anjo : IAnjo
     {
-        public int Idade { get; set; }
+        public int Age { get; set; }
 
         public void Voar()
         {

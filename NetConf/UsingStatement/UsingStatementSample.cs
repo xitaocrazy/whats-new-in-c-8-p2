@@ -2,7 +2,7 @@ using System.IO;
 
 namespace NetConf.UsingStatement
 {
-    public class UsingStatement
+    public class UsingStatementSample
     {
         const string original = ".\\NetConf\\UsingStatement\\file.txt";
         const string copia = ".\\NetConf\\UsingStatement\\fileCopy.txt";

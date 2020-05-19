@@ -1,6 +1,6 @@
 namespace NetConf.Helpers.Interfaces
 {
-    public interface IMinotauroVampiro : IMinotauro, IVampiro
+    public interface IMinotaurVampire : IMinotaur, IVampire
     {
          
     }
