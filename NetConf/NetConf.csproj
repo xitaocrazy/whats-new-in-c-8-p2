@@ -8,4 +8,9 @@
     <ItemGroup>
       <Folder Include="DefaultInterfaceMembers" />
     </ItemGroup>
+    <ItemGroup>
+      <None Update="UsingStatement\file.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
 </Project>

@@ -28,9 +28,8 @@ namespace NetConf.AsyncIterators
                     Console.WriteLine($"Processed block.");
                     Task.Delay(2000);
                 }
-                items.Add(i);
+                yield return i;
             }
-            return items;
         }
 
         private static async IAsyncEnumerable<int> GetSequenceUsingAsyncEnumerable()

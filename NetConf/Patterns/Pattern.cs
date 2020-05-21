@@ -24,7 +24,7 @@ namespace NetConf.Patterns
             Console.WriteLine(SwitchStatement(new Vampire {Age = 10}, 10)); //"Vampire special damage"
             Console.WriteLine(SwitchStatement(new Minotaur {Age = 10}, 10)); //"Human normal damage"
             Console.WriteLine(SwitchStatement(null, 10)); //"Class not reported"
-            Console.WriteLine(SwitchStatement(new Anjo(), 10)); //"It is not a valid class"
+            Console.WriteLine(SwitchStatement(new Angel(), 10)); //"It is not a valid class"
         }
 
 
@@ -57,7 +57,7 @@ namespace NetConf.Patterns
             Console.WriteLine(SwitchExpression(new Vampire {Age = 10}, 10)); //"Vampire special damage"
             Console.WriteLine(SwitchExpression(new Minotaur {Age = 10}, 10)); //"Human normal damage"
             Console.WriteLine(SwitchExpression(null, 10)); //"Class not reported"
-            Console.WriteLine(SwitchExpression(new Anjo(), 10)); //"It is not a valid class"          
+            Console.WriteLine(SwitchExpression(new Angel(), 10)); //"It is not a valid class"          
         }
 
         private static string SwitchExpression(object classe, int poder) => //Switch expression

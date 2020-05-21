@@ -7,8 +7,8 @@ namespace NetConf.ReadOnlyMembers
     {
         public static void Demo() 
         {
-            var coordenada = new Coordenada {x = 10, y=10};
-            Console.WriteLine(coordenada.ToString());
+            var coordinate = new Coordinate {X = 10, Y=10};
+            Console.WriteLine(coordinate.ToString());
         }
     }
 }

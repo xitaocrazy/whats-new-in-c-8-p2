@@ -7,21 +7,20 @@ namespace NetConf.StaticLocalFunctions
     {
         public static void Demo() 
         {
-            foreach (var i in Contador(1,10))
+            foreach (var i in IterateFromTo(1,10))
                 Console.WriteLine(i);
         }
 
-        //Agora (O compilador provê otimizações declarando como static)
-        public static IEnumerable<int> Contador(int inicio, int fim)
+        private static IEnumerable<int> IterateFromTo(int start, int end)
         {
-            if (inicio >= fim)
-                throw new ArgumentOutOfRangeException("O início do contador deve ser maior do que o fim.");
+            if (start >= end)
+                throw new ArgumentOutOfRangeException(null,"The beginning must be less than the end.");
 
-            return ContadorLocal(inicio, fim);
+            return IterateFromToLocally(start, end);
 
-            static IEnumerable<int> ContadorLocal(int inicio, int fim) 
+            static IEnumerable<int> IterateFromToLocally(int localStart, int localEnd) 
             {
-                for (var i = inicio; i <= fim; i++)
+                for (var i = localStart; i <= localEnd; i++)
                     yield return i;
             }
         }

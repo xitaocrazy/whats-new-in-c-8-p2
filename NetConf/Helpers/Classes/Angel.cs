@@ -3,13 +3,13 @@ using NetConf.Helpers.Interfaces;
 
 namespace NetConf.Helpers.Classes
 {
-    public class Anjo : IAnjo
+    public class Angel : IAngel
     {
         public int Age { get; set; }
 
         public void Voar()
         {
-            Console.WriteLine("Esta voando!!");
+            Console.WriteLine("Flying");
         }
     }
 }

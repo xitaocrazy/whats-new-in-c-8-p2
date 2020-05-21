@@ -7,7 +7,7 @@ namespace NetConf.Helpers.Structs
         }
         public void Dispose()
         {
-            // release unmanaged resources
+            //release unmanaged resources
         }
     }
 }
